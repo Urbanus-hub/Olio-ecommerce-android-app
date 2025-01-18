@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <solid android:color="#1B120F0F" /> <!-- Change the color as needed -->
+
+    <size
+        android:width="32dp"
+        android:height="32dp" /> <!-- Adjust the size of the circle as required -->
+
+    <padding
+        android:left="4dp"
+        android:right="4dp"
+        android:top="2dp"
+        android:bottom="2dp" />
+
+</shape>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "321819019909",
+    "project_id": "olio-cd3d7",
+    "storage_bucket": "olio-cd3d7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:321819019909:android:5e4a20e0a7f65fa2d2b7ec",
+        "android_client_info": {
+          "package_name": "com.example.olio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDK8Mhd6xyir7SRm3TG7edFtPmU2DcwVBM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

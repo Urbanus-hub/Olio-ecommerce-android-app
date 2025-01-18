@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">olio</string>
+    <string name="first_slide">Welcome to Olio</string>
+    <string name="second_slide">Shop with Ease</string>
+    <string name="third_slide">Fast and  Secure</string>
+    <string name="register">Register</string>
+
+    <!-- Descriptions -->
+    <string name="description">Discover a wide range of products, handpicked just for you. Your satisfaction is our priority!</string>
+</resources>

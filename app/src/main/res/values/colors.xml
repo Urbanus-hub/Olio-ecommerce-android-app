@@ -1,0 +1,18 @@
+<resources>
+    <color name="purple_500">#6200EE</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="gray_500">#999999</color>
+    <color name="light_gray">#EEEEEE</color>
+    <color name="black">#000000</color>
+    <color name="primary_color">#4CAF50</color> <!-- Green Accent -->
+    <color name="secondary_color">#FFFFFF</color> <!-- White -->
+    <color name="bottom_nav_icon_color">#757575</color> <!-- Grey for Inactive -->
+    <color name="bottom_nav_icon_color_selected">#4CAF50</color> <!-- Green for Selected Icon -->
+    <color name="bottom_nav_text_color">#757575</color> <!-- Grey for Inactive Text -->
+    <color name="bottom_nav_text_color_selected">#4CAF50</color> <!-- Green for Selected Text -->
+    <color name="light_background">#F9F9F9</color> <!-- Light Grey Background -->
+    <color name="text_color">#333333</color> <!-- Dark Text -->
+    <color name="secondary_text_color">#888888</color> <!-- Secondary Text -->
+    <color name="button_color">#FF5722</color> <!-- Accent Color for Button (Orange) -->
+    <color name="white">#FFFFFF</color> <!-- White for Buttons/Text -->
+</resources>
