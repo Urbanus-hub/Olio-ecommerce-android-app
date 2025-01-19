@@ -14,10 +14,10 @@ import java.util.Locale;
 
 public class MpesaHelper {
     private static final String BASE_URL = "https://sandbox.safaricom.co.ke/";
-    private static final String CONSUMER_KEY = "fKtDWjAQRGchyTsoRZfaGqESob83PlFdJVKlPohpnJLAdprw";
-    private static final String CONSUMER_SECRET = "QOnGh9IdSFRZfuKcl55q2AYIgBYqGWnaS6AGPRZnjxNqcWZJqTwtrsmvEuwkOYzg";
+    private static final String CONSUMER_KEY = "replace with you customer key";
+    private static final String CONSUMER_SECRET = "customer secret key";
     private static final String BUSINESS_SHORTCODE = "174379";
-    private static final String PASSKEY = "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919";
+    private static final String PASSKEY = "API key";
     private static final MediaType JSON = MediaType.get("application/json; charset=utf-8");
 
     private OkHttpClient client;
