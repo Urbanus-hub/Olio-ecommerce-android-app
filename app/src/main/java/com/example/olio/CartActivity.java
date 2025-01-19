@@ -12,53 +12,82 @@ public class CartActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private TextView totalPriceText;
     private Button checkoutButton;
+    private CartAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
 
+        initializeViews();
+        setupRecyclerView();
+        setupCheckoutButton();
+        updateTotalPrice();
+    }
+
+    private void initializeViews() {
         recyclerView = findViewById(R.id.cart_recycler_view);
         totalPriceText = findViewById(R.id.total_price);
         checkoutButton = findViewById(R.id.checkout_button);
+    }
 
-        // Setup RecyclerView
+    private void setupRecyclerView() {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        CartAdapter adapter = new CartAdapter(Cart.getInstance().getItems());
+        adapter = new CartAdapter(Cart.getInstance().getItems());
         recyclerView.setAdapter(adapter);
+    }
 
-        // Update total price
-        updateTotalPrice();
+    private void setupCheckoutButton() {
+        checkoutButton.setOnClickListener(v -> handleCheckout());
+    }
 
-        // Checkout button click listener
-        // In CartActivity.java, update the checkout button click listener:
-        // In CartActivity.java, modify the checkout button click listener:
-        checkoutButton.setOnClickListener(v -> {
-            if (Cart.getInstance().getItems().isEmpty()) {
-                Toast.makeText(this, "Your cart is empty!", Toast.LENGTH_SHORT).show();
-                return;
+    private void handleCheckout() {
+        if (Cart.getInstance().getItems().isEmpty()) {
+            Toast.makeText(this, "Your cart is empty!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        double totalAmount = Cart.getInstance().getTotalPrice();
+        PaymentDialog dialog = new PaymentDialog(this, totalAmount, new PaymentDialog.OnPaymentListener() {
+            @Override
+            public void onPaymentSuccess() {
+                // Payment was processed successfully but waiting for user to press Done
+                Toast.makeText(CartActivity.this, "Payment successful!", Toast.LENGTH_SHORT).show();
             }
 
-            double totalAmount = Cart.getInstance().getTotalPrice();
-            PaymentDialog dialog = new PaymentDialog(this, totalAmount, new PaymentDialog.OnPaymentCompleteListener() {
-                @Override
-                public void onPaymentComplete() {
-                    // Save the order to history
+            @Override
+            public void onPaymentError(Exception e) {
+                // Payment failed
+                Toast.makeText(CartActivity.this,
+                        "Payment failed: " + e.getMessage(),
+                        Toast.LENGTH_SHORT).show();
+            }
 
+            @Override
+            public void onPaymentCancelled() {
+                // User cancelled the payment
+                Toast.makeText(CartActivity.this,
+                        "Payment cancelled",
+                        Toast.LENGTH_SHORT).show();
+            }
 
-                    Cart.getInstance().clearCart();
-                    Toast.makeText(CartActivity.this, "Order placed successfully!", Toast.LENGTH_LONG).show();
-                    finish();
-                }
-            });
-            dialog.show();
+            @Override
+            public void onPaymentComplete() {
+                // User pressed Done button after successful payment
+                Cart.getInstance().clearCart();
+                adapter.notifyDataSetChanged();
+                updateTotalPrice();
+                Toast.makeText(CartActivity.this,
+                        "Order placed successfully!",
+                        Toast.LENGTH_LONG).show();
+                finish();
+            }
         });
-
-
+        dialog.show();
     }
 
     private void updateTotalPrice() {
         double total = Cart.getInstance().getTotalPrice();
-        totalPriceText.setText(String.format("Total: $%.2f", total));
+        totalPriceText.setText(String.format("Total: ksh%.2f", total));
     }
 }

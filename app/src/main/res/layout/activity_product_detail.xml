@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="#E4D4EB">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,7 +14,8 @@
             android:id="@+id/detail_product_image"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:scaleType="fitCenter" />
+            android:scaleType="fitCenter"
+            android:background="@color/white"/>
 
         <TextView
             android:id="@+id/detail_product_title"
@@ -43,10 +44,13 @@
 
         <Button
             android:id="@+id/add_to_cart_button"
+            android:backgroundTint="#126AFF"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
+            android:textSize="18sp"
             android:text="Add to Cart"
+            android:textColor="@color/white"
             android:padding="12dp" />
 
     </LinearLayout>

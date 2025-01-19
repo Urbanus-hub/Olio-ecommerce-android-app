@@ -1,6 +1,7 @@
 [versions]
 agp = "8.6.1"
 junit = "4.13.2"
+androidxJunit = "1.2.1"
 espressoCore = "3.6.1"
 appcompat = "1.7.0"
 material = "1.12.0"
@@ -8,6 +9,7 @@ constraintlayout = "2.2.0"
 recyclerview = "1.4.0"
 glide = "4.12.0"
 #agp = "8.6.1"
+
 googleGmsGoogleServices = "4.4.2"
 firebaseAuth = "23.1.0"
 swiperefreshlayout = "1.1.0"
@@ -15,8 +17,12 @@ retrofit = "2.11.0"
 picasso = "2.71828"
 cardview = "1.0.0"
 swiperefresh = "1.1.0"
+espresso = "3.5.0"
+okhttp = "4.9.3"
+gson = "2.10.1"
 
 [libraries]
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidxJunit" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 #junit = { group = "junit", name = "junit", version.ref = "junit" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -32,6 +38,10 @@ retrofit-gson = { group = "com.squareup.retrofit2", name = "converter-gson", ver
 picasso = { group = "com.squareup.picasso", name = "picasso", version.ref = "picasso" }
 cardview = { group = "androidx.cardview", name = "cardview", version.ref = "cardview" }
 swiperefresh = { group = "androidx.swiperefreshlayout", name = "swiperefreshlayout", version.ref = "swiperefresh" }
+#daraja = { group = "com.github.AndroidStudy", name = "android-daraja-sdk", version.ref = "daraja" }
+okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 #android-application = { id = "com.android.application", version.ref = "agp" }

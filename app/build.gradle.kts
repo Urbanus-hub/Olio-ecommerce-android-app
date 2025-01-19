@@ -33,24 +33,32 @@ android {
 }
 
 dependencies {
+
     // Core libraries
-    implementation(libs.androidx.recyclerview) // RecyclerView for product listing
-    implementation(libs.appcompat) // AppCompat for backward compatibility
-    implementation(libs.material) // Material Design components
-    implementation(libs.constraintlayout) // ConstraintLayout for UI layouts
-
-    // Image loading library
+    implementation(libs.appcompat)
+    implementation(libs.material)
+    implementation(libs.constraintlayout)
+    implementation(libs.androidx.recyclerview)
+    implementation(libs.cardview)
+//    implementation(libs.daraja)
+    // Image loading libraries
     implementation(libs.glide)
-    implementation(libs.firebase.auth)
-    implementation(libs.androidx.swiperefreshlayout) // Glide for efficient image loading
+    implementation(libs.picasso)
 
-        implementation(libs.retrofit)
-        implementation(libs.retrofit.gson)
-        implementation(libs.picasso)
-        implementation(libs.cardview)
-        implementation(libs.swiperefresh)
-    // Test libraries
-    testImplementation(libs.junit) // JUnit for unit testing
-//    androidTestImplementation(libs.ext.junit) // Android-specific JUnit extensions
-    androidTestImplementation(libs.espresso.core) // Espresso for UI testing
+    // Network libraries
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gson)
+    implementation(libs.okhttp)
+    implementation(libs.gson)
+    // Firebase
+    implementation(libs.firebase.auth)
+
+    // UI components
+    implementation(libs.androidx.swiperefreshlayout)
+    implementation(libs.swiperefresh)
+    implementation(libs.androidx.junit)
+
+    // Testing
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.espresso.core)
 }

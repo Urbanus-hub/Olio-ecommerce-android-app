@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/white">
+
+    <!-- Error/Cancelled Message -->
+    <TextView
+        android:id="@+id/error_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Payment Failed or Cancelled"
+        android:textColor="#FF0202"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Optional Error Description -->
+    <TextView
+        android:id="@+id/error_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="There was an issue processing your payment. Please try again."
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Retry Button -->
+    <Button
+        android:id="@+id/retry_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Retry"
+        android:backgroundTint="#126AFF"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Close Button -->
+    <Button
+        android:id="@+id/close_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Close"
+        android:backgroundTint="#126AFF"
+        android:textColor="@android:color/white"/>
+
+</LinearLayout>

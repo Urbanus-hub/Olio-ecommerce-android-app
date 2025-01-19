@@ -93,7 +93,7 @@
             android:layout_height="wrap_content"
             android:text="@string/register"
             android:padding="12dp"
-            android:backgroundTint="#6200EE"
+            android:backgroundTint="#126AFF"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             android:fontFamily="sans-serif-medium"

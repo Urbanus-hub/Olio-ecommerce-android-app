@@ -77,18 +77,18 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Error fetching products", Toast.LENGTH_SHORT).show();
             }
         });
-        // In MainActivity.java, add this to onCreate:
+
         cartIcon.setOnClickListener(v -> {
             Intent intent = new Intent(this, CartActivity.class);
             startActivity(intent);
         });
-        // In MainActivity.java, add this to onCreate:
+
         ImageView profileIcon = findViewById(R.id.profile_icon);
         profileIcon.setOnClickListener(v -> {
             Intent intent = new Intent(this, UserProfileActivity.class);
             startActivity(intent);
         });
-// Set up cart update listener
+
         Cart.getInstance().setCartUpdateListener(count -> {
             cartItemCount.setText(String.valueOf(count));
             cartItemCount.setVisibility(count > 0 ? View.VISIBLE : View.GONE);
